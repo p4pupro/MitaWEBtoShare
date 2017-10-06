@@ -1,0 +1,33 @@
+#logout {
+ position: relative;
+ margin-top: 1%;
+ margin-left: 10%;
+ background-color:  #49c7ed;
+ border-color:  #49c7ed;
+}
+
+
+#imagenFacebook {
+  position: relative;
+  right: 15%;
+  margin-top: 13%;
+  width: 60%;
+  height: auto;
+}
+
+
+#imagenTwitter {
+  position: relative;
+  right: 15%;
+  margin-top: 40%;
+  width: 100%;
+  height: auto;
+}
+
+#imagenGoogle {
+  position: relative;
+  right: 40%;
+  margin-top: 5%;
+  width: 14%;
+  height: auto;
+}

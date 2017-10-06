@@ -1,0 +1,36 @@
+<div class="container">
+    <header [@fallIn]="state">
+      <button (click)="logout()" class="basic-btn">Logout</button>
+    </header>
+    <div id="page" [@moveInLeft]="state">
+      <h2 style="color: darkblue">Bienvenido {{ name }}!</h2>
+    </div>
+
+      <div class="row">
+        <app-print></app-print>
+        <div class="col-md-8 col-md-offset-2">
+          <div #scrollMe class="bs-example" id="messages">
+            <div *ngFor="let message of messages | async">
+                <div class="bubble" [class.you]="isYou(message.email)" [class.me]="isMe(message.email)">
+                   <p>{{ message.message }}</p>
+                   <div class="author">
+                       {{ message.email }} |
+                        {{ message.timestamp | date:"MM/dd/yy hh:mm a" }}
+                   </div>
+                </div>
+            </div>
+         </div>
+          <figure class="highlight">
+
+            <!-- Point: 3 -->
+            <input type="textarea" class="message-text" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
+            <a class="send-message" (click)="sendMessage()">SEND</a>
+
+          </figure>
+        </div>
+      </div>
+
+    <div>
+      <a [routerLink]="['../home']" routerLinkActive="active" class="alc"><strong>Ir a Inicio...</strong></a>
+  </div>
+</div>

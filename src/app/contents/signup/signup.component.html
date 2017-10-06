@@ -1,0 +1,51 @@
+<!--<div class="container">
+  <a routerLink="/login" id="goback"><span class="glyphicon glyphicon-arrow-left"> Ir atrás</span></a>
+
+  <h2>Registrate ahora</h2>
+
+  <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+
+  <form #formData='ngForm' (ngSubmit)="onSubmit(formData)" name="myForm">
+
+    <input type="email" placeholder="Email address.." (ngModel)="email" name="email"  class="txt" required>
+    <input ng-model="password" type="password" name="myPasswordField" class="txt"/>
+    <input ng-model="passwordConfirm" type="password" match="myForm.myPasswordField" name="myConfirmField" class="txt"/>
+    <button type="submit" [disabled]="!formData.valid" class="basic-btn">Crear Cuenta</button>
+  </form>
+  <hr/>
+
+</div>
+
+<script>
+  angular.module('myauthapp',['validation.match'])
+  </script>
+-->
+
+<div class="container">
+  <a routerLink="/login" id="goback"><span class="glyphicon glyphicon-arrow-left"> Ir atrás</span></a>
+
+  <h2>Registrate ahora</h2>
+
+
+  <div *ngIf="error" class="alert alert-warning" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{error}}
+  </div>
+  <div class="modal-dialog">
+    <div class="registermodal-container">
+      <h1>Registrate</h1><br>
+      <form class="form-signin" (submit)="register($event, name.value, email.value, password.value)">
+        <label for="name" class="sr-only">Name</label>
+        <input #name type="text" id="name" class="form-control" placeholder="Name" required="">
+        <label for="email" class="sr-only">Email address</label>
+        <input #email type="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input #password type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <br>
+        <button  class="btn btn-md btn-primary btn-block" type="submit">Registrar</button>
+      </form>
+    </div>
+  </div>
+     </div>
+

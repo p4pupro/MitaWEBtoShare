@@ -1,0 +1,64 @@
+#lock {
+    width:40%;
+    margin: 1.5em auto 4em auto;
+    display:block;
+}
+
+app-login div.container :after {
+  position: inherit !important;
+}
+
+
+
+#fb {
+    background:#3B5998 url('assets/images/facebook.svg') no-repeat 14px 6px;
+    background-size: 47px;
+    color:#fff;
+}
+
+#tw {
+  background:#88D2FD url('assets/images/tw3.svg') no-repeat 23px 21px;
+  background-size: 30px;
+  color:#fff;
+}
+
+#google {
+
+    background: #fff  url('assets/images/google.svg') no-repeat 25px;
+    background-size: 25px;
+}
+
+#email {
+    background: #fff  url('assets/images/email.svg') no-repeat 90%;
+    background-size: 25px;
+}
+
+#pwd {
+  background: #fff  url('assets/images/lock.svg') no-repeat 90%;
+  background-size: 25px;
+}
+
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+    #toolbar {
+        width:90%;
+        margin-left: -45%;
+    }
+    #fb {
+        background:#3B5998;
+    }
+
+    #tw {
+      background:#88D2FD
+  }
+
+    #google {
+        background: #fff;
+    }
+
+    #email {
+        background: #ECECEC;
+    }
+}

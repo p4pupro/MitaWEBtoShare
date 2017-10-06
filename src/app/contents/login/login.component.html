@@ -1,0 +1,73 @@
+<!--
+	<div class="container">
+        <img src="assets/images/lock.svg" id="lock">
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+  <button (click)="loginFb()" id="fb">Login With Facebook</button><br>
+  <button (click)="loginTw()" id="tw">Login With Twitter</button><br>
+  <button (click)="loginGoogle()" id="google">Login With Google</button>
+  <button  id="email"><a [routerLink]="['../email']"  routerLinkActive="active">Email</a></button>
+
+  <a [routerLink]="['../signup']" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+</div>
+
+-->
+
+
+<!--ULTIMO FUNCIONAL-->
+<!--<div class="container">
+    <h2>Identificate!</h2>
+<div class="agile_social_banner">
+    <ul class="agileits_social_list">
+      <li><a (click)="loginFb()" class="w3_agile_facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+      <li><a (click)="loginTw()"  class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a (click)="loginGoogle()" class="w3_agile_dribble"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+
+
+
+      <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+
+      <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+
+        <input type="email" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
+        <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+
+        <button type="submit" [disabled]="!formData.valid" class="basic-btn">Log in</button>
+    </form>
+      <a [routerLink]="['../signup']" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+</div>-->
+
+<div class="container">
+  <h2>Identifícate!</h2>
+<div class="agile_social_banner">
+  <ul class="agileits_social_list">
+    <li><a (click)="loginFb()" class="w3_agile_facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+    <li><a (click)="loginTw()"  class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li><a (click)="loginGoogle()" class="w3_agile_dribble"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+  </ul>
+</div>
+
+
+<div *ngIf="error" class="alert alert-warning" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+  {{error}}
+</div>
+<div class="modal-dialog">
+  <div class="loginmodal-container">
+    <h1>Login to Your Account</h1><br>
+    <form class="form-signin" (submit)="loginWithEmail($event, email.value, password.value)">
+      <label for="email" class="sr-only">Email address</label>
+      <input #email type="email" id="email" class="form-control" placeholder="Email">
+      <label for="password" class="sr-only">Password</label>
+      <input #password type="password" id="pwd" class="form-control" placeholder="Password" required="">
+      <br>
+      <button class="btn btn-md btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+    <hr>
+    <a [routerLink]="['../signup']" style="cursor: pointer;">Register Now</a>
+  </div>
+</div>
+</div>

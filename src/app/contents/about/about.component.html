@@ -1,0 +1,128 @@
+<!-- about -->
+	<div class=" w3ls-section" id="inner-about">
+		<div class="container">
+			<h3 class="h3-w3l">Sobre nostros...</h3>
+			<!-- about bottom-->
+			<div class="about-bottom">
+				<div class="col-md-6 about-w3right">
+
+				</div>
+				<div class="col-md-6 about-w3left">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h5 class="panel-title asd">
+									<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i class="glyphicon glyphicon-minus" aria-hidden="true"></i>Empresa
+									</a>
+								</h5>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body panel_text">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h5 class="panel-title asd">
+									<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i class="glyphicon glyphicon-minus" aria-hidden="true"></i>Empresa
+									</a>
+								</h5>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body panel_text">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h5 class="panel-title asd">
+									<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i class="glyphicon glyphicon-minus" aria-hidden="true"></i>Empresa
+									</a>
+								</h5>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body panel_text">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFour">
+								<h5 class="panel-title asd">
+									<a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i class="glyphicon glyphicon-minus" aria-hidden="true"></i>Empresa
+									</a>
+								</h5>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour" aria-expanded="true">
+								<div class="panel-body panel_text">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+			<!-- //about-bottom -->
+	</div>
+	<!-- //about -->
+
+	<!-- about -->
+	<div id="about" class="w3ls-section about">
+		<div class="container">
+			<div class="about-agileinfo">
+				<div class="col-sm-3  about-grids about-grids2">
+					<img src="../../assets/images/g3.jpg" class="img-responsive" alt=""/>
+				</div>
+				<div class="col-sm-6 about-text">
+					<h2>aqui va el tipico eslogan tal cual</h2>
+					<p>aqui va el pastelito de coco, no porque ignoras niño tal cual... fleje de fleje y todo el rollo, aguanta pap.... </p>
+				</div>
+				<div class="col-sm-3 about-grids about-grids2 inner-about-g3">
+					<img src="../../assets/images/g4.jpg" class="img-responsive" alt=""/>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- team -->
+	<div id="team" class="w3ls-section team agileits">
+		<div class="team-agileinfo">
+			<div  class="container">
+				<h3 class="h3-w3l">Nuestro equipo</h3>
+				<div  class="team-row agileits-w3layouts">
+					<div *ngFor="let miembro of infoteam.equipo" class="col-md-3 col-xs-6 team-grids">
+						<div  class="team-agileimg">
+							<img class="img-responsive" [src]="miembro.url" alt="">
+							<div class="captn">
+								<div class="captn-top">
+									<h4>{{miembro.name}}</h4>
+									<p>{{miembro.occupation}}</p>
+								</div>
+								<div class="social-w3lsicon agileinfo-social-grids">
+									<ul>
+										<li><a href="{{miembro.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="{{miembro.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="{{miembro.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //team -->
